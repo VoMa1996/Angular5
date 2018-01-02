@@ -1,3 +1,37 @@
-<p>
-  auth-form works!
-</p>
+<form action="/action_page.php">
+    <div class="imgcontainer">
+      OK
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" checked>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" checked>
+
+      <button  ngClick="test()">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+</form>
+
+<button (click)="environmentName = environmentName + 1" >
+  Increment
+</button>
+<span>
+  <h1>{{environmentName}}</h1>
+  count: {{environmentName}}
+</span>
+
+<script type="text/javascript">
+it('should check ngClick', function() {
+expect(element(by.binding('count')).getText()).toMatch('0');
+element(by.css('button')).click();
+expect(element(by.binding('count')).getText()).toMatch('1');
+});
+</script>
