@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
+import { IAuthForm } from './auth-form/auth-form.interface';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'app';
